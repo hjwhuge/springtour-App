@@ -1,0 +1,75 @@
+/*==========样式重置===========*/
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+input,
+img,
+ul,
+li,
+ol,
+dl,
+dt,
+dd {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    border: 0;
+}
+
+input {
+    /*去掉高亮*/
+    outline: none;
+}
+
+header,
+footer,
+section,
+main,
+nav {
+    display: block;
+}
+/*公共类*/
+/*清除浮动*/
+.clearfix:after{
+    content:"";
+    display:block;
+    height:0;
+    clear:both;
+    overflow:hidden;
+    visibility: hidden;
+}
+.clearfix:before{
+    display: table;
+    content: "";
+}
+body {
+    font-size: 12px;
+    // font-family: "微软雅黑";
+    color: #3e3e3e;
+    height: 100%;
+
+}
+
+.icon {
+    width: 2em;
+    height: 2em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
