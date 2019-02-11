@@ -2,12 +2,13 @@ import React from 'react';
 
 import Footer from '../../components/footer';
 
-let Destination = ()=>(
+let Mine = ()=>(
     <div>
-        <h1>目的地</h1>
+        <h1>我的</h1>
         <Footer/>
     </div>
 );
 
 
-export default Destination;
+
+export default Mine;

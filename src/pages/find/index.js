@@ -1,3 +1,14 @@
 import React from 'react';
-let Mine = ()=><div>发现</div>;
-export default Mine
+
+import Footer from '../../components/footer';
+
+let Find = ()=>(
+    <div>
+        <h1>发现</h1>
+        <Footer/>
+    </div>
+);
+
+
+
+export default Find;

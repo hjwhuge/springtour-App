@@ -1,3 +1,14 @@
 import React from 'react';
-let Mine = ()=><div>我的</div>;
-export default Mine
+
+import Footer from '../../components/footer';
+
+let Member = ()=>(
+    <div>
+        <h1>客服</h1>
+        <Footer/>
+    </div>
+);
+
+
+
+export default Member;

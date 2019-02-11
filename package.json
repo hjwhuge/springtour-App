@@ -5,6 +5,7 @@
   "dependencies": {
     "@babel/core": "7.1.6",
     "@svgr/webpack": "2.4.1",
+    "amazeui-react": "^1.2.3",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
     "babel-jest": "23.6.0",
@@ -114,9 +115,14 @@
     ]
   },
   "devDependencies": {
+    "antd": "^3.13.2",
+    "antd-mobile": "^2.2.8",
+    "babel-plugin-import": "^1.11.0",
+    "node-sass": "^4.11.0",
     "react-redux": "^6.0.0",
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0"
   }
 }

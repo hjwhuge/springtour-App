@@ -317,6 +317,10 @@ module.exports = function(webpackEnv) {
             // smaller than specified limit in bytes as data URLs to avoid requests.
             // A missing `test` is equivalent to a match.
             {
+              test: /\.scss$/,
+              loaders: ['style-loader', 'css-loader', 'sass-loader'],
+            },
+            {
               test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
               loader: require.resolve('url-loader'),
               options: {
@@ -336,6 +340,13 @@ module.exports = function(webpackEnv) {
                 ),
                 
                 plugins: [
+                  // 按需引入ui框架中的组件
+                  ["import", {
+                    "libraryName": "antd-mobile",
+                    "libraryDirectory": "es",
+                    "style": "css" // `style: true` 会加载 less 文件
+                  }]
+                ,
                   [
                     require.resolve('babel-plugin-named-asset-import'),
                     {
@@ -457,7 +468,7 @@ module.exports = function(webpackEnv) {
               // its runtime that would otherwise be processed through "file" loader.
               // Also exclude `html` and `json` extensions so they get processed
               // by webpacks internal loaders.
-              exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/],
+              exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/,/\.scss$/],
               options: {
                 name: 'static/media/[name].[hash:8].[ext]',
               },
@@ -469,6 +480,7 @@ module.exports = function(webpackEnv) {
       ],
     },
     plugins: [
+          
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
         Object.assign(
