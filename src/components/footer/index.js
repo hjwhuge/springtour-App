@@ -6,8 +6,8 @@ import { TabBar } from 'antd-mobile';
 
 
 class footer extends React.Component {
-    constructor(props) {
-      super(props);
+    constructor() {
+      super();
       this.state = {
         selectedTab: 'home',
       };
@@ -32,7 +32,7 @@ class footer extends React.Component {
     render() {
       let {history} = this.props;
       return (
-        <div style={{ position: 'fixed', height: '100%', width: '100%', top: 0 }}>
+        <div style={{ position: 'fixed', width: '100%', bottom: 0 ,zIndex: 2}} className="fotter">
           <TabBar
             unselectedTintColor="#949494"
             tintColor="#33A3F4"

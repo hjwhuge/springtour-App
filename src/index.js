@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-
+import axios from 'axios'
 // import App from './App';
 // import * as serviceWorker from './serviceWorker';
 
@@ -21,6 +21,14 @@ import * as serviceWorker from './serviceWorker';
 
 import store from './store';
 // console.log(store.getState());
+
+// 引入全局变量，用来指定base_url
+import global_ from './config/envconfig.js';
+// console.log(global_)
+// 把全局变量写入vue下
+// Vue.prototype.GLOBAL = global_;
+// 设置baseURL
+axios.defaults.baseURL = global_.BASE_URL;
 
 ReactDOM.render(
     <Provider store={store}>

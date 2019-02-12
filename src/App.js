@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import {connect} from 'react-redux';
 
+import './style/common.scss'
+
 class App extends Component {
 
   render() {
