@@ -1,24 +1,101 @@
 .destination{
-    border-bottom:.013333rem solid #ddd;
+    .top{
+        border-bottom:1px solid #ccc;
+    }
     .am-navbar-light{
         color:#00be88;
+    }
+    .search{
+        width: 4.733333rem;
+        height: .4rem;
+        padding:.133333rem;
+        background: #fff;
+        .city{
+            display:inline-block;
+            width: .946667rem;
+            height: .4rem;
+            line-height: .4rem;
+
+            span{
+                margin-right:.08rem;
+            }
+        }
+        .sear{
+            display:inline-block;
+            width: 3.773333rem;
+            height: .4rem;
+            line-height: .4rem;
+            background-color: #f2f3f7;
+            border-radius: 1.28rem;
+            text-indent: .6rem;
+            color:#666;
+            input{
+                border:none;
+                background: #F5F5F9;
+                opacity: 0.5;
+                margin-left:.08rem;
+            }
+        }
     }
     .tabs{
         .tab-nav{
             float:left;
             width: 1rem;
+            height: 7.32rem;
+            background: #fff;
+            // F5F5F9
             li{
                 width:1rem;
                 height: .72rem;
                 line-height: .72rem;
                 text-align: center;
                 border-bottom:.013333rem solid #ccc;
-                background: #fff;
+                // background: #fff;
             }
         }
         .tab-content{
             margin:.2rem;
-            width: 3.6rem;
+            margin-right:0;
+            width:3.8rem;
+            float:left;
+            .ul-img{
+                li{
+                    float:left;
+                    width: 1.733333rem;
+                    margin:0 .133333rem .133333rem 0;
+                    color:#fff;
+                    position: relative;
+                    h3{
+                        position: absolute;
+                        top:40%;
+                        left:0;
+                        right:0;
+                        text-align: center;
+                        p{
+                            margin-bottom:.053333rem;
+                        }
+                    }
+                    img{
+                        width: 1.733333rem;
+                        height: 1.12rem;
+                    }
+
+                }
+            }
+            h2{
+                margin-bottom:.266667rem;
+            }
+            .ul-city{
+                li{
+                    float:left;
+                    width: 1.12rem;
+                    height: .4rem;
+                    line-height: .4rem;
+                    text-align: center;
+                    background: #fff;
+                    margin:0 .106667rem .133333rem 0;
+                }
+            }
         }
     }
 }

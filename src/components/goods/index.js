@@ -2,16 +2,6 @@ import React from 'react';
 
 import './goods.scss'
 
-
-// {
-    // cityName,
-    // imgurl,
-    // price,
-    // productName,
-    // productTypeName,
-    // scheduleDateList
-// }
-
 let goods = (props)=>{
     let data = props.data;
     // console.log(data)

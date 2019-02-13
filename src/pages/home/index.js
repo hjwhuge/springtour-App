@@ -197,7 +197,7 @@ class Home extends Component {
                             <Tabs tabs={tabs}
                                 initalPage={'t2'}
                                 tabBarActiveTextColor={'#00be88'}
-                                tabBarUnderlineStyle={{'color':'#00be88'}}
+                                tabBarUnderlineStyle={{'borderColor':'#00be88'}}
                                 // tabDirection={'vertical'}
                                 // renderTabBar={renderTabBar}
                                 // usePaged={false}

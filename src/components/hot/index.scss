@@ -1,0 +1,38 @@
+.ul-img{
+    li{
+        float:left;
+        width: 1.733333rem;
+        margin:0 .133333rem .133333rem 0;
+        color:#fff;
+        position: relative;
+        h3{
+            position: absolute;
+            top:40%;
+            left:0;
+            right:0;
+            text-align: center;
+            p{
+                margin-bottom:.053333rem;
+            }
+        }
+        img{
+            width: 1.733333rem;
+            height: 1.12rem;
+        }
+
+    }
+}
+h2{
+    margin-bottom:.266667rem;
+}
+.ul-city{
+    li{
+        float:left;
+        width: 1.12rem;
+        height: .4rem;
+        line-height: .4rem;
+        text-align: center;
+        background: #fff;
+        margin:0 .106667rem .133333rem 0;
+    }
+}

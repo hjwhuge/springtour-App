@@ -1,0 +1,42 @@
+.fotter{
+    .dialog{
+        background-color: rgba(0,0,0,.7);
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index:100;
+        .dialog-bd{
+            text-align: center;
+            font-size: .31rem;
+            color: #aaa;
+            position: relative;
+            padding-bottom: 3.9rem;
+            height: 80%;
+            ul{
+                position: absolute;
+                top: 35%;
+                right: 0;
+                left: 0;
+                li{
+                    width:50%;
+                    float:left;
+                    p{
+                        color:#fff;
+                        margin-top:.266667rem;
+                    }
+                }
+            }
+        }
+        .dialog-ft{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            height: 20%;
+            color:#fff;
+        }
+    }
+}

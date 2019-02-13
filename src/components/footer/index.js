@@ -1,8 +1,8 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
-import { TabBar } from 'antd-mobile';
+import { TabBar, Icon } from 'antd-mobile';
 
-// import './footer.scss';
+import './footer.scss';
 
 
 class footer extends React.Component {
@@ -10,6 +10,7 @@ class footer extends React.Component {
       super();
       this.state = {
         selectedTab: 'home',
+        seen:'none'
       };
     }
     // componentWillUpdate(nextProps, nextState){
@@ -23,16 +24,24 @@ class footer extends React.Component {
       // 获取当前路由（hash,history）
       let hash = window.location.hash;// 可能得到的值：/home,/list,/list/computer
       hash = hash.split('/')[1];
-      // console.log(hash)
+      // console.log(this.state.seen)
       this.setState({
         selectedTab:hash
       })
 
   }
-    render() {
-      let {history} = this.props;
-      return (
-        <div style={{ position: 'fixed', width: '100%', bottom: 0 ,zIndex: 2}} className="fotter">
+
+  close(){
+    this.setState({
+      seen:'none'
+    });
+  }
+
+  render() {
+    let {history} = this.props;
+    return (
+      <div className="fotter">
+        <div style={{ position: 'fixed', width: '100%', bottom: 0 ,zIndex: 2}}>
           <TabBar
             unselectedTintColor="#949494"
             tintColor="#33A3F4"
@@ -125,9 +134,10 @@ class footer extends React.Component {
               selected={this.state.selectedTab === 'member'}
               onPress={() => {
                 this.setState({
-                  selectedTab: 'member',
+                  // selectedTab: 'member',
+                  seen:'block'
                 });
-                history.replace('/member')
+                // history.replace('/member')
               }}
             >
             </TabBar.Item>
@@ -139,7 +149,7 @@ class footer extends React.Component {
               selected={this.state.selectedTab === 'mine'}
               onPress={() => {
                 this.setState({
-                  selectedTab: 'mine',
+                  selectedTab: 'mine'
                 });
                 history.replace('/mine')
               }}
@@ -147,7 +157,25 @@ class footer extends React.Component {
             </TabBar.Item>
           </TabBar>
         </div>
-      );
+        <div className="dialog" style={{display:this.state.seen}}>
+              <div className="dialog-bd">
+                <ul>
+                  <li>
+                      <Icon type='check-circle' size='lg' color='#00be88'/>
+                      <p>电话咨询</p>
+                  </li>
+                  <li>
+                      <Icon type='loading' size='lg' color='#00be88'/>
+                      <p>在线客服</p>
+                  </li>
+                </ul>
+              </div>
+              <div className="dialog-ft" onClick={this.close.bind(this)}>
+                  <Icon type='cross-circle' size='lg'/>
+              </div>
+        </div>
+      </div>
+    );
     }
   }
 

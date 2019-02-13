@@ -6,6 +6,7 @@ import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Home from '../pages/home';
 import Destination from '../pages/destination';
 import Find from '../pages/find';
+// 这个路由没用，点击弹出一个遮罩层即可
 import Member from '../pages/member';
 import Mine from '../pages/mine';
 
