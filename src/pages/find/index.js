@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Footer from '../../components/footer';
 import './index.scss'
 
-import axios from 'axios';
+// import axios from 'axios';
 import { NavBar, Icon ,Tabs, WhiteSpace} from 'antd-mobile';
 import { StickyContainer} from 'react-sticky';
 class Find extends Component {
@@ -76,13 +76,16 @@ class Find extends Component {
                                 // usePaged={false}
                             >
                                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px', backgroundColor: '#fff' }}>
-                                    {/* <Goods data={lead}/> */}
+                                    aa
                                 </div>
                                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px', backgroundColor: '#fff' }}>
-                                    {/* <Goods data={trait}/> */}
+                                    bb
                                 </div>
                                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px', backgroundColor: '#fff' }}>
-                                    {/* <Goods data={civil}/> */}
+                                    cc
+                                </div>
+                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '250px', backgroundColor: '#fff' }}>
+                                    dd
                                 </div>
                             </Tabs>
                         </StickyContainer>

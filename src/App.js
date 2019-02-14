@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import {connect} from 'react-redux';
 
+import { withRouter } from 'react-router-dom';
+
 import './style/common.scss'
 
 class App extends Component {
@@ -38,5 +40,7 @@ class App extends Component {
 
 // App = connect(mapStateToProps,mapDispatchToProps)(App);
 App = connect()(App);
+
+App = withRouter(App);
 
 export default App;

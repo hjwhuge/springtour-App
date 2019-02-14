@@ -9,6 +9,8 @@ import Find from '../pages/find';
 // 这个路由没用，点击弹出一个遮罩层即可
 import Member from '../pages/member';
 import Mine from '../pages/mine';
+import Tour from '../pages/tour';
+import Card from '../pages/card';
 
 import App from '../App'
 
@@ -23,6 +25,8 @@ export default class RouteConfig extends Component{
                         <Route path="/find" component={Find}/>
                         <Route path="/member" component={Member}/>
                         <Route path="/mine" component={Mine}/>
+                        <Route path="/tour" component={Tour}/>
+                        <Route path="/card" component={Card}/>
                         <Redirect from="/" to="/home"/>
                     </Switch>
                 </App>
